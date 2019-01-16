@@ -29,7 +29,7 @@
     <div class="container-fluid sticky-top m-0 p-0">
       <!--Brand-->
       <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="../index.html">
           <img src="../images/lgo3.png" width="80" />
         </a>
         <!--Toggler Button-->
@@ -45,7 +45,7 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">How it Works</a>
+              <a class="nav-link" href="../index.html">How it Works</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="views/register.html">Login</a>
@@ -54,6 +54,68 @@
           </ul>
         </div>
       </nav>
+
+      <!-- whole login/register container -->
+      <div class="container bg-dark">
+          <div class="row align-items-center justify-content-center">
+              <div class="col-8 bg-light ">  <ul class="nav nav-tabs">
+                
+                    <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                            <li class="nav-item">
+                              <a
+                                class="nav-link active"
+                                id="home-tab"
+                                data-toggle="tab"
+                                href="#login"
+                                role="tab"
+                                aria-controls="home"
+                                aria-selected="true"
+                                >Employee</a
+                              >
+                            </li>
+                            <li class="nav-item">
+                              <a
+                                class="nav-link"
+                                id="profile-tab"
+                                data-toggle="tab"
+                                href="#register"
+                                role="tab"
+                                aria-controls="profile"
+                                aria-selected="false"
+                                >Hirer</a
+                              >
+                            </li>
+                          </ul>
+                
+                <!-- <ul class="nav nav-pills">
+                    <li class="active"><a data-toggle="pill" href="#login">Login</a></li>
+                    <li><a data-toggle="pill" href="#register">Register</a></li>
+                  </ul> -->
+
+                  <div class="tab-content">
+                        <div id="login" class="tab-pane fade in active">
+                          <h3>login</h3>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                        <div id="register" class="tab-pane fade">
+                          <h3>Register</h3>
+                          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+    
+                      </div>
+                    </div>
+          </div>
+          <!--Form section -->
+          <!-- <div class="row align-items-center justify-content-center">
+                <div class="col-8 bg-dark formItems">
+                    <div class="row align-items-center justify-content-center bg-dark formItems">1
+    
+
+                </div>
+            </div>
+      </div> -->
+
+      
       
     <!-- We will put our React component inside this div. -->
 
