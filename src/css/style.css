@@ -34,8 +34,14 @@ h1 {
 .backimg {
   background-image: url(../images/rawpixel-648563-unsplash.jpg);
   background-size: cover;
-  height: 100%;
+  height: 400px;
 }
 a:link {
   text-decoration: underline;
+}
+
+.credForm {
+  background: rgba(87, 88, 145, 0.4);
+  height: 250px;
+  width: 100px;
 }
