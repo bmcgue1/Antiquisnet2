@@ -1,0 +1,41 @@
+.happOwner {
+  background-image: url(../images/happy-small-business-owners-1.jpg);
+  height: 340px;
+}
+
+.filledCenterRows {
+  height: 100%;
+}
+
+.bg-lightPurple {
+  /* background-color: #575891; */
+  background: rgba(87, 88, 145, 0.4);
+  text-align: center;
+  color: #fff;
+}
+
+.section1 {
+  background-color: #f7f6f1;
+  height: 240px;
+}
+body {
+  text-align: center;
+  color: #535894;
+}
+li:hover {
+  background-color: #575891;
+}
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 35px;
+}
+
+.backimg {
+  background-image: url(../images/rawpixel-648563-unsplash.jpg);
+  background-size: cover;
+  height: 100%;
+}
+a:link {
+  text-decoration: underline;
+}
