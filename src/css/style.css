@@ -45,3 +45,12 @@ a:link {
   height: 250px;
   width: 100px;
 }
+#signup {
+  display: none;
+}
+#whitelink {
+  color: #f7f6f1;
+}
+h4 {
+  font-size: 1em;
+}
