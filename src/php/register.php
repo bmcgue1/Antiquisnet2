@@ -28,8 +28,6 @@ while($row = mysqli_fetch_array($result)){
   }
   echo $firtName;
 
-  
-
 // echo $fName;
 // echo $lname;
 // echo $uName;
