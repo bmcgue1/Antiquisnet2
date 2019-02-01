@@ -1,0 +1,3 @@
+[31-Jan-2019 18:25:53 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'antiquisnet'@'localhost' (using password: NO) in /home3/antiquisnet/public_html/web_test/src/php/register.php on line 13
+[31-Jan-2019 18:26:33 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'antiquisnet'@'localhost' (using password: NO) in /home3/antiquisnet/public_html/web_test/src/php/register.php on line 13
+[31-Jan-2019 18:29:52 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/antiquisnet/public_html/web_test/src/php/register.php on line 13
