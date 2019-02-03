@@ -10,21 +10,19 @@ $indus = $_POST['industry'];
 /**Import db config */
 include "dbconfig_register.php";
 /** assign connection varible  */
-$con = mysqli_connect($host, $username, $password, $dbname) or die("Cannot connect to DB: $dbname on $host\n");
+$conn = mysqli_connect($host, $username, $password, $dbname) or die("Cannot connect to DB: $dbname on $host\n");
 /**  query */
 
 $query = "INSERT INTO `antiquis_testRepo`.`Users` (`fName`, `lName`, `uName`, `eMail`, `pWord`, `rpWord`, `industry`) VALUES ('$fName', '$lName', '$uName', '$eMail', '$pWord', '$rpWord', '$indus')";
 // $query = "  INSERT INTO Users (fName, lName, uName, eMail, pWord, rpWord, industry) VALUES ('hey', 'eee', 'heee', 'heee@gmail.com', 'hhh', 'hhh, clothoing)";
 if (!$query) {
-    printf("Error: %s\n", mysqli_error($con));
+    printf("Error: %s\n", mysqli_error($conn));
     exit();
 }
-$result = mysqli_query($con, $query);
+$result = mysqli_query($conn, $query);
 
 while($row = mysqli_fetch_array($result)){
-   $firtName = $row["fName"];
-   $lastName = $row["lName"];
-   $industry = $row["industry"];
+ echo 'results fetched';
   }
   echo $firtName;
 
