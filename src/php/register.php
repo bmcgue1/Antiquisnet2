@@ -10,7 +10,7 @@ $indus = $_POST['industry'];
 /**Import db config */
 include "dbconfig_register.php";
 /** assign connection varible  */
-$conn = mysqli_connect($host, $username, $password, $dbname) or die("Cannot connect to DB: $dbname on $host\n");
+$con = mysqli_connect($host, $username, $password, $dbname) or die("Cannot connect to DB: $dbname on $host\n");
 /**  query */
 
 $query = "INSERT INTO `antiquis_testRepo`.`Users` (`fName`, `lName`, `uName`, `eMail`, `pWord`, `rpWord`, `industry`) VALUES ('$fName', '$lName', '$uName', '$eMail', '$pWord', '$rpWord', '$indus')";
@@ -19,20 +19,14 @@ if (!$query) {
     printf("Error: %s\n", mysqli_error($conn));
     exit();
 }
-$result = mysqli_query($conn, $query);
-
-while($row = mysqli_fetch_array($result)){
- echo 'results fetched';
-  }
-  echo $firtName;
-
-// echo $fName;
-// echo $lname;
-// echo $uName;
-// echo $eMail;
-// echo $pWord;
-// echo $rpWor;
-// echo $gende;
+$result = mysqli_query($con, $query);
+if (mysqli_affected_rows($con) >0 ){
+    header("Location: https://theantiquisnetwork.com/web_test/src/views/creds.html"); /* Redirect browser */
+    mysqli_free_result($result);
+    mysqli_close($con);
+exit();
+}
+ 
 mysqli_free_result($result);
 mysqli_close($con);
 ?>

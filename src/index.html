@@ -16,16 +16,13 @@
       crossorigin="anonymous"
     />
     <!--style-->
-    <!-- <link
+    <link
       rel="stylesheet"
       type="text/css"
       href="https://theantiquisnetwork.com/web_test/src/css/style.css"
-    /> -->
-    <link rel="stylesheet" href="/css/style.css" />
-    <title>Antiquisnet</title>
-  </head>
+    />
+    <!-- <link rel="stylesheet" href="/css/style.css" /> -->
 
-  <body>
     <!--React Button part 1-->
     <link
       rel="stylesheet"
@@ -40,32 +37,86 @@
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
     />
 
-    <!-------->
-    <div class="container-fluid sticky-top m-0 p-0">
-      <!--Brand-->
-      <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-          <img src="images/lgo3.png" width="80" />
-        </a>
-        <!--Toggler Button-->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#collapsibleNavbar"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <title>Antiquisnet</title>
+  </head>
 
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="views/creds.html">Login / Register</a>
-            </li>
-          </ul>
+  <body>
+    <!-------->
+    <div class="container m-0 p-0">
+      <!--Brand-->
+      <div class="container-fluid sticky-top m-0 p-0">
+        <nav class="navbar navbar-light bg-light">
+          <a class="navbar-brand" href="#">
+            <img src="images/lgo3.png" width="80" />
+          </a>
+
+          <!--Toggler Button-->
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#collapsibleNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="views/creds.html">Login / Register</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <!--Search-->
+      <div class="container search">
+        <div class="row  align-items-center justify-content-center search">
+          <div class="col-xs-8 col-xs-offset-2">
+            <div class="input-group search">
+              <div class="input-group-btn search-panel search">
+                <button
+                  type="button"
+                  class="btn btn-default dropdown-toggle"
+                  data-toggle="dropdown"
+                >
+                  <span id="search_concept">Filter by</span>
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#contains">Contains</a></li>
+                  <li><a href="#its_equal">It's equal</a></li>
+                  <li><a href="#greather_than">Greather than ></a></li>
+                  <li><a href="#less_than">Less than < </a></li>
+                  <li class="divider"></li>
+                  <li><a href="#all">Anything</a></li>
+                </ul>
+              </div>
+              <input
+                type="hidden"
+                name="search_param"
+                value="all"
+                id="search_param"
+              />
+              <input
+                type="text"
+                class="form-control"
+                name="x"
+                placeholder="Search term..."
+              />
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">
+                  <span class="glyphicon glyphicon-search"></span>
+                </button>
+              </span>
+            </div>
+          </div>
         </div>
-      </nav>
+      </div>
+
       <!--Section 1-->
       <div class="container section1">
         <div class="row align-items-center justify-content-center">
