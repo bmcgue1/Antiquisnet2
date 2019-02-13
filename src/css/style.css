@@ -2,19 +2,7 @@
   background-image: url(../images/happy-small-business-owners-1.jpg);
   height: 340px;
 }
-.homeBack {
-  background-image: url(../images/adult-afro-blazer-1056556.jpg);
-  height: 340px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.profileSection{
-  background-color: #f7f6f1;
-  height: 250px;
-}
 
-}
 .filledCenterRows {
   height: 100%;
 }
@@ -25,9 +13,7 @@
   text-align: center;
   color: #fff;
 }
-.search {
-  background-color: #f7f6f1;
-}
+
 .section1 {
   background-color: #f7f6f1;
   height: 240px;

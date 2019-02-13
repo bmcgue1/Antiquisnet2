@@ -7,26 +7,25 @@ $eMail = $_POST['eMail'];
 $pWord = $_POST['pWord'];
 $rpWord = $_POST['rpWord'];
 $indus = $_POST['industry'];
-/**Import db config */
-include "dbconfig_register.php";
-/** assign connection varible  */
-$con = mysqli_connect($host, $username, $password, $dbname) or die("Cannot connect to DB: $dbname on $host\n");
-/**  query */
+$cName = $_POST['companyName'];
 
-$query = "INSERT INTO `antiquis_testRepo`.`Users` (`fName`, `lName`, `uName`, `eMail`, `pWord`, `rpWord`, `industry`) VALUES ('$fName', '$lName', '$uName', '$eMail', '$pWord', '$rpWord', '$indus')";
-// $query = "  INSERT INTO Users (fName, lName, uName, eMail, pWord, rpWord, industry) VALUES ('hey', 'eee', 'heee', 'heee@gmail.com', 'hhh', 'hhh, clothoing)";
+include "dbconfig_register.php";
+
+$con = mysqli_connect($host, $username, $password, $dbname) or die("Cannot connect to DB: $dbname on $host\n");
+$query = "INSERT INTO `antiquis_testRepo`.`User` (`fName`, `lName`, `uName`, `eMail`, `companyName`, `industry`, `pWord`) VALUES ('$fName', '$lName', '$uName', '$eMail', '$cName', '$indus', '$pWord')";
+
 if (!$query) {
-    printf("Error: %s\n", mysqli_error($conn));
+    printf("Error: %s\n", mysqli_error($con));
     exit();
 }
-$result = mysqli_query($con, $query);
+
+mysqli_query($con, $query);
 if (mysqli_affected_rows($con) >0 ){
-    header("Location: https://theantiquisnetwork.com/web_test/src/views/creds.html"); /* Redirect browser */
-    mysqli_free_result($result);
     mysqli_close($con);
+    header("Location: https://theantiquisnetwork.com/web_test/src/views/creds.html"); 
 exit();
-}
- 
-mysqli_free_result($result);
-mysqli_close($con);
+    }
+    else{
+        echo "Error, no insert";
+    }
 ?>
